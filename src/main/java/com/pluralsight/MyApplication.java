@@ -38,6 +38,14 @@ public class MyApplication {
         double maxNum = getMax(num1, num2);
         System.out.println("The maximum of " + num1 + " and " + num2 + " is " + maxNum);
 
+        int randomNum = generateRandomNumber();
+        System.out.println("Random number between 1 and 0: " + randomNum);
+    }
+
+    public static int generateRandomNumber(){
+        int min = 1;
+        int max = 10;
+        return (int)(Math.random() * ((max - min) + 1)) + min;
     }
 
     public static double getMax(double num1, double num2){
