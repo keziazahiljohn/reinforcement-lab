@@ -42,11 +42,19 @@ public class MyApplication {
         }
     }
 
-    public static void printWelcomeMessage(String name) {
+    /*public static void printWelcomeMessage(String name) {
         if (name.equalsIgnoreCase("Alice")) {
             System.out.println("Welcome, Alice");
         } else {
             System.out.println("Welcome, Stranger");
+        }
+    }*/
+
+    public static void printWelcomeMessage(String name) {
+        switch (name.toLowerCase()) {
+            case "alice" -> System.out.println("Welcome Alice!");
+            case "bob" -> System.out.println("Hey Bob, do you wanna grab a drink?");
+            default -> System.out.println("Hello Stranger!");
         }
     }
 
