@@ -23,7 +23,31 @@ public class MyApplication {
         double squareRoot = getSquareRoot(number);
         System.out.println("The square root of " + number + " is " + squareRoot);
         System.out.println("==========================================");
+
+        int firstNumber = getFirstNumber(scanner);
+        int secondNumber = getSecondNumber(scanner);
+        boolean isGreaterThan = isGreaterThan(firstNumber, secondNumber);
+        System.out.println(firstNumber + " is greater than " + secondNumber + ": " + isGreaterThan);
+
+        String welcomeMessage = name.equalsIgnoreCase("lara") ? "You are not welcome" + name + "!" : "Welcome " + name + "!";
+        System.out.println(welcomeMessage);
+        System.out.println("==========================================");
     }
+
+    public static int getFirstNumber(Scanner scanner) {
+        System.out.println("Enter first number: ");
+        return scanner.nextInt();
+    }
+
+    public static int getSecondNumber(Scanner scanner) {
+        System.out.println("Enter second number: ");
+        return scanner.nextInt();
+    }
+
+    public static boolean isGreaterThan(int firstNumber, int secondNumber){
+        return firstNumber > secondNumber;
+    }
+
 
     public static double getNumber(Scanner scanner) {
         System.out.println("Give a number: ");
