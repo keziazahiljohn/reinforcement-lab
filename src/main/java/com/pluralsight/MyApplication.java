@@ -18,6 +18,20 @@ public class MyApplication {
         printWelcomeMessage(name);
         System.out.println("==========================================");
         printDrinkingEligibility(name, age);
+
+        double number = getNumber(scanner);
+        double squareRoot = getSquareRoot(number);
+        System.out.println("The square root of " + number + " is " + squareRoot);
+        System.out.println("==========================================");
+    }
+
+    public static double getNumber(Scanner scanner) {
+        System.out.println("Give a number: ");
+        return scanner.nextDouble();
+    }
+
+    public static double getSquareRoot(double number) {
+        return Math.sqrt(number);
     }
 
     public static void printDrinkingEligibility(String name, int age) {
