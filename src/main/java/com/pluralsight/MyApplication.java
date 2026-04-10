@@ -32,6 +32,16 @@ public class MyApplication {
         String welcomeMessage = name.equalsIgnoreCase("lara") ? "You are not welcome" + name + "!" : "Welcome " + name + "!";
         System.out.println(welcomeMessage);
         System.out.println("==========================================");
+
+        double num1 = 5.6;
+        double num2 = 3.2;
+        double maxNum = getMax(num1, num2);
+        System.out.println("The maximum of " + num1 + " and " + num2 + " is " + maxNum);
+
+    }
+
+    public static double getMax(double num1, double num2){
+        return Math.max(num1, num2);
     }
 
     public static int getFirstNumber(Scanner scanner) {
